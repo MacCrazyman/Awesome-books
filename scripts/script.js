@@ -21,7 +21,7 @@ const getBook = () => {
   } else {
     books = JSON.parse(localStorage.getItem('books'));
   }
-  return books
+  return books;
 }
 
 const displayBooks = () => {
@@ -52,18 +52,16 @@ const createTable = (book) => {
   table.appendChild(tr);
 }
 
-const form = document.querySelector('#add_books');
+window.addEventListener('DOMContentLoaded', () => {
+  displayBooks();
+});
 
-form.addEventListener('submit',(e) => {
+document.getElementById('form').addEventListener('submit',(e) => {
   e.preventDefault();
-  const title = document.getElementById('title');
-  const author = document.getElementById('author');
+  const title = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
   const id = `${title}${author}`;
   const book = new Book(id,title,author);
   createTable(book);
   addBook(book);
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  displayBooks();
 });
