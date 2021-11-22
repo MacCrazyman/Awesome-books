@@ -30,13 +30,20 @@ const displayBooks = () => {
     createTable(book);
   });
 }
-
-const deleteBook = () => {
-
+ // browser view
+const deleteBook = (element) => {
+  if (element.classList.contains('delete'));
+  element.parentElement.remove();
 }
-
-const removeBook = () => {
-
+// local storage
+const removeBook = (id) => {
+  const books = getBook(); 
+  // for (const key of books){
+  //   console.log(key);
+  //   if (key.id == id){
+  //     delete books.key
+  //   }
+  // }
 }
 
 const createTable = (book) => {
@@ -64,4 +71,8 @@ document.getElementById('form').addEventListener('submit',(e) => {
   const book = new Book(id,title,author);
   createTable(book);
   addBook(book);
+});
+
+document.getElementById('table').addEventListener('click', (e) => {
+deleteBook(e.target);
 });
