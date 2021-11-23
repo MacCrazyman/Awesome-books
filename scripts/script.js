@@ -1,5 +1,4 @@
-// class to create book objets
-class Book {
+class Book { // eslint-disable-line
   constructor(id, title, author) {
     this.id = id;
     this.title = title;
@@ -7,74 +6,68 @@ class Book {
   }
 }
 
-//  retreive books from the local storage
-const getBook = () => {
-  let books;
-
-  if (localStorage.getItem('books') === null) {
-    books = [];
-  } else {
-    books = JSON.parse(localStorage.getItem('books'));
+class Library {
+  constructor() {
+    if (localStorage.getItem('books') === null) {
+      this.books = [];
+    } else {
+      this.books = JSON.parse(localStorage.getItem('books'));
+    }
   }
-  return books;
-};
 
-//  function to add books to the local storage
-const addBook = (book) => {
-  const books = getBook();
-  books.push(book);
-  localStorage.setItem('books', JSON.stringify(books));
-};
+  addBook = (book) => {
+    this.books.push(book);
+    localStorage.setItem('books', JSON.stringify(this.books));
+  };
 
-const createTable = (book) => {
-  const table = document.getElementById('table');
-  const tr = document.createElement('div');
-  tr.innerHTML = `<div'>
-  <div>${book.title}</div>
-  <div>${book.author}</div>
-  <button type="button" id="${book.id}" class="delete">Remove</button>
-  <hr>
-  </div>`;
-  table.appendChild(tr);
-};
+  createTable = (book) => {
+    const table = document.getElementById('table');
+    const tr = document.createElement('div');
+    tr.innerHTML = `
+    <div>${book.title}</div>
+    <div>${book.author}</div>
+    <button type="button" id="${book.id}" class="delete">Remove</button>
+    <hr>`;
+    table.appendChild(tr);
+  };
 
-//  function to show books in the browser
-const displayBooks = () => {
-  const books = getBook();
-  books.forEach((book) => {
-    createTable(book);
-  });
-};
+  displayBooks = () => {
+    this.books.forEach((book) => {
+      this.createTable(book);
+    });
+  };
 
-// delete books from the browser view
-const deleteBook = (element) => {
-  element.parentElement.remove();
-};
+  deleteBook = (element) => {
+    element.parentElement.remove();
+  };
 
-// delete from local storage
-const removeBook = (id) => {
-  let books = getBook();
-  books = books.filter((value) => value.id !== id);
-  localStorage.setItem('books', JSON.stringify(books));
-};
+  removeBook = (id) => {
+    this.books = this.books.filter((value) => value.id !== id);
+    localStorage.setItem('books', JSON.stringify(this.books));
+  };
+}
 
 // create new book objects
+const Storage = new Library();
+
 document.getElementById('form').addEventListener('submit', (e) => {
   e.preventDefault();
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const id = `${title}${author}`;
   const book = new Book(id, title, author);
-  createTable(book);
-  addBook(book);
+  Storage.createTable(book);
+  Storage.addBook(book);
+  document.getElementById('title').value = '';
+  document.getElementById('author').value = '';
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  displayBooks();
+  Storage.displayBooks();
 });
 
 document.getElementById('table').addEventListener('click', (e) => {
   if (e.target.tagName !== 'BUTTON') return;
-  deleteBook(e.target);
-  removeBook(e.target.id);
+  Storage.deleteBook(e.target);
+  Storage.removeBook(e.target.id);
 });
