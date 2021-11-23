@@ -58,6 +58,8 @@ document.getElementById('form').addEventListener('submit', (e) => {
   const book = new Book(id, title, author);
   Storage.createTable(book);
   Storage.addBook(book);
+  document.getElementById('title').value = '';
+  document.getElementById('author').value = '';
 });
 
 window.addEventListener('DOMContentLoaded', () => {
