@@ -1,4 +1,55 @@
 * {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
 }
+
+body {
+  font-family: 'Balsamiq Sans', sans-serif;
+  font-weight: 900;
+  color: black;
+}
+
+main {
+  padding: 1rem;
+}
+
+#table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+  border: 5px solid black;
+  margin-block: 2rem;
+}
+
+#table tr {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+#table tr:nth-child(odd) {
+  background: rgba(128, 128, 128, 0.267);
+}
+
+hr {
+  /* margin: 1rem 0; */
+  color: inherit;
+  background-color: currentColor;
+  border: 1px solid black;
+  opacity: .75;
+  width: 150px;
+}
+
+button {
+  box-shadow: 4px 3px 5px black;
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid black;
+  font-weight: bolder;
+  padding: 0.2rem 0.5rem;
+}
+
+
+
