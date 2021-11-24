@@ -7,6 +7,7 @@ body {
   font-family: 'Balsamiq Sans', sans-serif;
   font-weight: 900;
   color: black;
+  padding-inline: 1rem;
 }
 
 main {
@@ -68,4 +69,15 @@ form {
 
 form button {
   align-self: flex-end;
+}
+
+.menu-items a{
+  margin-right: 5px;
+  color: black;
+  border-right: 2px solid black;
+  padding: 0 20px;
+}
+
+.menu-items a:last-child {
+  border: none;
 }

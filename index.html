@@ -10,19 +10,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="d-flex flex-column justify-content-center align-items-center">
+<header>
+  <nav class="navbar d-flex flex-direction- justify-content-between navbar-light">
+    <a class="navbar-brand" href="#">Awesome Books</a>
+    <div class="menu-items" id="navbarText">
+    <a href="#" class="text-decoration-none" id="#">List</a>
+    <a href="#" class="text-decoration-none" id="#">Add New</a>
+    <a href="#" class="text-decoration-none" id="#">Contact</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="d-flex flex-column justify-content-center align-items-center">
     <h1 id='page_title'>Awesome books</h1>
     <table id="table"></table>
     <hr>
-    <section>
+  </section>
+  <section>
       <h2>Add a new book</h2>
       <form class= "d-flex flex-column" action="index.html" id="form">
-        <input type="text" id="title" placeholder="Title">
-        <input type="text" id="author" placeholder="Author">
+        <input required type="text" id="title" placeholder="Title">
+        <input required type="text" id="author" placeholder="Author">
         <button type="submit" id="add_book">Add</button>
       </form>
-    </section>
-  </main>
+  </section>
+  <section class="contact-section">
+         
+  </section>
+</main>
+<footer>
+    
+</footer>
   <script src="scripts/script.js"></script>
 </body>
 </html>
