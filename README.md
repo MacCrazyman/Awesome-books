@@ -2,58 +2,55 @@
 
 # AWESOME BOOKS
 
-> One paragraph statement about the project.
+> This project  creates a library which is displayed on the webpage.
 
 ![screenshot](img/awesome_books_basic_ui.png)
 
-Additional description about the project and its features.
+Books can be added and deleted from library and the local storage.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTMl, CSS, JavaScript
+- Bootstrap
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://maccrazyman.github.io/Awesome-books/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+* A functional computer with VS Code or any functional coding software.
+* Git bash or any version control software.
 
 ### Setup
-
-### Install
+* Copy the repo link and clone it in your local machine
+* You can execute the following command in your git bash:
+    ```` 
+    git clone https://github.com/MacCrazyman/Awesome-books.git
+    ````
 
 ### Usage
-
-### Run tests
-
-### Deployment
+* Open the [index](./index.html) file with your browser to see the webpage.
+* You can also open the [GitHub pages deployment](https://maccrazyman.github.io/Awesome-books/) to see a live version of the webpage.
 
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Leonardo Pareja**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@MacCrazyman](https://github.com/MacCrazyman)
+- Twitter: [@MacCrazyman](https://twitter.com/MacCrazyman)
+- LinkedIn: [Leonardo Pareja](https://www.linkedin.com/in/leonardo-pareja-pareja/)
 
-👤 **Author2**
+👤 **Manuel Aldaraca**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@vicmaburrito](https://github.com/vicmaburrito)
+
 
 ## 🤝 Contributing
 
@@ -65,11 +62,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 

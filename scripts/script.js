@@ -22,12 +22,12 @@ class Library {
 
   createTable = (book) => {
     const table = document.getElementById('table');
-    const tr = document.createElement('div');
+    const tr = document.createElement('tr');
     tr.innerHTML = `
-    <div>${book.title}</div>
-    <div>${book.author}</div>
-    <button type="button" id="${book.id}" class="delete">Remove</button>
-    <hr>`;
+    <td>
+      <p>"${book.title}" by ${book.author}</p>
+    </td>
+    <td><button type="button" id="${book.id}" class="delete">Remove</button></td>`;
     table.appendChild(tr);
   };
 
@@ -38,7 +38,7 @@ class Library {
   };
 
   deleteBook = (element) => {
-    element.parentElement.remove();
+    element.parentElement.parentElement.remove();
   };
 
   removeBook = (id) => {
