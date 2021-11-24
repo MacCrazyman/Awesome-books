@@ -18,6 +18,7 @@ main {
   flex-direction: column;
   width: 100%;
   max-height: 60vh;
+  min-height: 200px;
   overflow-y: auto;
   border: 5px solid black;
   margin-block: 2rem;
@@ -27,6 +28,7 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
+  align-items: center;
 }
 
 #table tr:nth-child(odd) {
@@ -51,5 +53,17 @@ button {
   padding: 0.2rem 0.5rem;
 }
 
+p {
+  margin: 0;
+}
 
-
+input {
+  border: 3px solid black;
+  margin: 0;
+}
+form {
+  gap: 1rem;
+}
+form button {
+  align-self: flex-end;
+}

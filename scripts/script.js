@@ -38,7 +38,7 @@ class Library {
   };
 
   deleteBook = (element) => {
-    element.parentElement.remove();
+    element.parentElement.parentElement.remove();
   };
 
   removeBook = (id) => {
