@@ -89,16 +89,34 @@ form button {
   width: 100%;
 }
 footer{
-  font-weight: bold;
   position:fixed;
   bottom: 0;
   right: 0;
   width: 100%;
-  background-color: white;
+  background-color: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.75) 75%, rgba(255,255,255,0) 100%);
   padding: 10px;
 }
 
 footer p {
   border: 5px solid black;
   padding: 10px;
+}
+
+header {
+  position:fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(255,255,255); 
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.75) 75%, rgba(255,255,255,0) 100%);
+}
+
+nav {
+  border: 5px solid black;
+  width: 100%;  
+}
+
+section {
+  padding-top: 100px;
 }
