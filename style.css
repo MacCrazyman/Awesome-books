@@ -7,6 +7,7 @@ body {
   font-family: 'Balsamiq Sans', sans-serif;
   font-weight: 900;
   color: black;
+  padding-inline: 1rem;
 }
 
 main {
@@ -68,4 +69,70 @@ form {
 
 form button {
   align-self: flex-end;
+}
+
+.menu-items a {
+  margin-right: 5px;
+  color: black;
+  border-right: 2px solid black;
+  padding: 0 20px;
+}
+
+a:hover {
+  color: blue;
+}
+
+.menu-items a:last-child {
+  border: none;
+}
+
+.contact-section {
+  max-width: 50%;
+}
+
+.section-table {
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.75) 75%, rgba(255, 255, 255, 0) 100%);
+  padding: 10px;
+}
+
+footer p {
+  border: 5px solid black;
+  padding: 10px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.75) 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+nav {
+  border: 5px solid black;
+  width: 100%;
+}
+
+section {
+  padding-top: 100px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#date {
+  padding: 5px;
+  float: right;
 }

@@ -6,6 +6,8 @@ class Book { // eslint-disable-line
   }
 }
 
+const table = document.querySelector('#table');
+
 class Library {
   constructor() {
     if (localStorage.getItem('books') === null) {
@@ -45,6 +47,14 @@ class Library {
     this.books = this.books.filter((value) => value.id !== id);
     localStorage.setItem('books', JSON.stringify(this.books));
   };
+
+  showDate = () => {
+    const { DateTime } = luxon; // eslint-disable-line
+    const myDate = document.querySelector('#date');
+    const showMyDate = document.createElement('div');
+    showMyDate.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+    myDate.appendChild(showMyDate);
+  }
 }
 
 // create new book objects
@@ -65,9 +75,35 @@ document.getElementById('form').addEventListener('submit', (e) => {
 window.addEventListener('DOMContentLoaded', () => {
   Storage.displayBooks();
 });
+Storage.showDate();
 
-document.getElementById('table').addEventListener('click', (e) => {
+table.addEventListener('click', (e) => {
   if (e.target.tagName !== 'BUTTON') return;
   Storage.deleteBook(e.target);
   Storage.removeBook(e.target.id);
+});
+
+const tableSection = document.querySelector('#table-section');
+const formSection = document.querySelector('#form-section');
+const contactSection = document.querySelector('#contact-section');
+const listLink = document.querySelector('#list-link');
+const newbookLink = document.querySelector('#newbook-link');
+const contactLink = document.querySelector('#contact-link');
+
+listLink.addEventListener('click', () => {
+  tableSection.classList.remove('hidden');
+  formSection.classList.add('hidden');
+  contactSection.classList.add('hidden');
+});
+
+newbookLink.addEventListener('click', () => {
+  tableSection.classList.add('hidden');
+  formSection.classList.remove('hidden');
+  contactSection.classList.add('hidden');
+});
+
+contactLink.addEventListener('click', () => {
+  tableSection.classList.add('hidden');
+  formSection.classList.add('hidden');
+  contactSection.classList.remove('hidden');
 });
