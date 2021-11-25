@@ -14,19 +14,19 @@
   <nav class="p-2 navbar d-flex justify-content-between navbar-light">
     <a class="navbar-brand" href="#">Awesome Books</a>
     <div class="menu-items" id="navbarText">
-    <a href="#" class="text-decoration-none" id="#">List</a>
-    <a href="#" class="text-decoration-none" id="#">Add New</a>
-    <a href="#" class="text-decoration-none" id="#">Contact</a>
+    <a href="#" class="text-decoration-none" id="list-link">List</a>
+    <a href="#" class="text-decoration-none" id="newbook-lik">Add New</a>
+    <a href="#" class="text-decoration-none" id="contact-link">Contact</a>
     </div>
   </nav>
 </header>
 <main class="d-flex flex-column justify-content-center align-items-center">
-  <section class="d-flex flex-column justify-content-center align-items-center section-table">
+  <section class="d-flex flex-column justify-content-center align-items-center section-table" id="table-section">
     <h1 id='page_title'>Awesome books</h1>
     <table id="table"></table>
     <hr>
   </section>
-  <section class="d-flex flex-column justify-content-center align-items-center">
+  <section class="d-flex flex-column justify-content-center align-items-center" id="form-section">
       <h2>Add a new book</h2>
       <form class= "d-flex flex-column" action="index.html" id="form">
         <input required type="text" id="title" placeholder="Title">
@@ -34,7 +34,7 @@
         <button type="submit" id="add_book">Add</button>
       </form>
   </section>
-  <section class="d-flex flex-column justify-content-center align-items-center contact-section">
+  <section class="d-flex flex-column justify-content-center align-items-center contact-section" id="contact-section">
      <h2>Contact Information</h2>
      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione ad aperiam eius saepe at voluptas placeat soluta aut ut voluptatem quo quaerat possimus fugiat odit architecto error, reprehenderit modi voluptate.</p>    
      <ul>

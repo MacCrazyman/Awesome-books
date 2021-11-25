@@ -71,3 +71,10 @@ document.getElementById('table').addEventListener('click', (e) => {
   Storage.deleteBook(e.target);
   Storage.removeBook(e.target.id);
 });
+
+const tableSection = document.querySelector('#table-section');
+const formSection = document.querySelector('#form-section');
+const contactSection = document.querySelector('#contact-section');
+const listLink =  document.querySelector('#list-link');
+const newbookLink =  document.querySelector('#newbook-link');
+const contactLink = document.querySelector('#contact-link');
