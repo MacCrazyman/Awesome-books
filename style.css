@@ -71,29 +71,36 @@ form button {
   align-self: flex-end;
 }
 
-.menu-items a{
+.menu-items a {
   margin-right: 5px;
   color: black;
   border-right: 2px solid black;
   padding: 0 20px;
 }
 
+a:hover {
+  color: blue;
+}
+
 .menu-items a:last-child {
   border: none;
 }
 
-.contact-section{
+.contact-section {
   max-width: 50%;
 }
+
 .section-table {
   width: 100%;
 }
-footer{
-  position:fixed;
+
+footer {
+  position: fixed;
   bottom: 0;
   right: 0;
   width: 100%;
-  background-color: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.75) 75%, rgba(255,255,255,0) 100%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.75) 75%, rgba(255, 255, 255, 0) 100%);
   padding: 10px;
 }
 
@@ -103,18 +110,18 @@ footer p {
 }
 
 header {
-  position:fixed;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   padding: 10px;
-  background-color: rgb(255,255,255); 
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.75) 75%, rgba(255,255,255,0) 100%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.75) 75%, rgba(255, 255, 255, 0) 100%);
 }
 
 nav {
   border: 5px solid black;
-  width: 100%;  
+  width: 100%;
 }
 
 section {
@@ -128,8 +135,4 @@ section {
 #date {
   padding: 5px;
   float: right;
-}
-
-a:hover {
-  color: blue;
 }

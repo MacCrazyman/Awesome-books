@@ -48,7 +48,7 @@ class Library {
     localStorage.setItem('books', JSON.stringify(this.books));
   };
 
-  showDate() {
+  showDate = () => {
     const { DateTime } = luxon; // eslint-disable-line
     const myDate = document.querySelector('#date');
     const showMyDate = document.createElement('div');
@@ -91,19 +91,19 @@ const newbookLink = document.querySelector('#newbook-link');
 const contactLink = document.querySelector('#contact-link');
 
 listLink.addEventListener('click', () => {
-  tableSection.classList.remove('hidden')
-  formSection.classList.add('hidden')
-  contactSection.classList.add('hidden')
+  tableSection.classList.remove('hidden');
+  formSection.classList.add('hidden');
+  contactSection.classList.add('hidden');
 });
 
-newbookLink.addEventListener('click',  () => {
-  tableSection.classList.add('hidden')
-  formSection.classList.remove('hidden')
-  contactSection.classList.add('hidden')
+newbookLink.addEventListener('click', () => {
+  tableSection.classList.add('hidden');
+  formSection.classList.remove('hidden');
+  contactSection.classList.add('hidden');
 });
 
-contactLink.addEventListener('click',  () => {
-  tableSection.classList.add('hidden')
-  formSection.classList.add('hidden')
-  contactSection.classList.remove('hidden')
+contactLink.addEventListener('click', () => {
+  tableSection.classList.add('hidden');
+  formSection.classList.add('hidden');
+  contactSection.classList.remove('hidden');
 });
