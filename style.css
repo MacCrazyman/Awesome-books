@@ -81,3 +81,24 @@ form button {
 .menu-items a:last-child {
   border: none;
 }
+
+.contact-section{
+  max-width: 50%;
+}
+.section-table {
+  width: 100%;
+}
+footer{
+  font-weight: bold;
+  position:fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+}
+
+footer p {
+  border: 5px solid black;
+  padding: 10px;
+}
