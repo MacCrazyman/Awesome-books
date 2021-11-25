@@ -120,3 +120,16 @@ nav {
 section {
   padding-top: 100px;
 }
+
+.hidden {
+  display: none !important;
+}
+
+#date {
+  padding: 5px;
+  float: right;
+}
+
+a:hover {
+  color: blue;
+}
